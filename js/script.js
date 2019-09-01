@@ -10,17 +10,11 @@ function myFunction(x) {
    a.style.paddingBottom = "15px";
 }
 var a = document.querySelector(".scroll-effect");
-window.onscroll = function() {
-   scrollFunction();
-};
 
 function scrollFunction() {
-   if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
-   ) {
+   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       a.style.position = "fixed";
-      a.stye.width = "100%";
+      // a.stye.width = "100%";
       a.style.top = "0";
       a.style.zIndex = "1";
       a.style.backgroundColor = "#04091ecb";
@@ -30,3 +24,6 @@ function scrollFunction() {
       a.style.paddingBottom = "0px";
    }
 }
+window.onscroll = function() {
+   scrollFunction();
+};
